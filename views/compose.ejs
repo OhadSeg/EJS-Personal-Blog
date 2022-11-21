@@ -1,0 +1,18 @@
+<%- include("partials/header"); -%>
+<!--Using EJS to include layouts from view folder-->
+
+<h1>Compose</h1>
+
+<form class="" action="/compose" method="post">
+  <div class="form-group">
+    <label> Title </label>
+    <input type="text" class="form-control" name="postTitle" />
+    <label> Post </label>
+    <textarea name="postBody" class="form-control" cols="40" rows="5"> </textarea>
+  </div>
+  <button class="btn btn-primary" type="submit" name="button"> Publish  </button>
+
+
+  <!--Whenever button is clicked we trigger post request to the /compose route with the input of the tect field-->
+</form>
+<%- include('partials/footer'); -%>

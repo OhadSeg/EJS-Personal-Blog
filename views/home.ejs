@@ -1,0 +1,16 @@
+<%- include("partials/header"); -%>
+<!--Using EJS to include layouts from view folder-->
+
+<h1>Home</h1>
+
+<p><%=startingContent%></p>
+<!--passing over a variable on the request via EJS-->
+<% console.log(posts); %> 
+
+<% posts.forEach(post => { %>
+ <h1> <%= post.title%>  </h1>
+ <p> <%= post.body.substring(0, 100) + "..."%>  
+<a href="/posts/<%= post.title%>">Read more</a>
+</p>
+<% });%>
+<%- include('partials/footer'); -%>
